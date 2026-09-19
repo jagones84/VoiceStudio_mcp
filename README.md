@@ -15,6 +15,10 @@ Exposes 6 tools to any MCP client (Trae IDE, Claude Desktop, etc.):
 
 **Free & local.** No API costs, all inference runs on your GPU (tested on NVIDIA GB10 sm_120 / DGX Spark). Uses [OmniVoice](https://huggingface.co/k2-fsa/OmniVoice) (Apache 2.0) + [higgs-audio-v2-tokenizer](https://huggingface.co/eustlb/higgs-audio-v2-tokenizer) (MIT).
 
+## Parent project
+
+This repo is a thin **MCP wrapper** around **[debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio)** (AGPL-3.0) — the upstream local voice-cloning / TTS engine. All heavy inference (torch + CUDA) runs inside VoiceStudio's venv; this repo only exposes it over MCP. The underlying model is [k2-fsa/OmniVoice](https://huggingface.co/k2-fsa/OmniVoice).
+
 ---
 
 ## Why this exists
