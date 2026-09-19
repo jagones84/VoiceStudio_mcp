@@ -14,7 +14,7 @@ from ..core.models import SynthRequest, SynthResult
 from ..core.storage import voice_exists
 
 
-# Valid OmniVoice English instruct keywords (subset, full set in README-voice-studio-dgx.md §3)
+# Valid OmniVoice English instruct keywords (subset)
 _VALID_INSTRUCT = {
     "american accent", "australian accent", "british accent", "canadian accent",
     "child", "chinese accent", "elderly", "female", "high pitch", "indian accent",

@@ -17,7 +17,7 @@ are listed here for full transparency.
   from VoiceStudio's venv as a separate subprocess. No code from VoiceStudio
   is copied, modified, or statically/dynamically linked into this repo.
   VoiceStudio is installed by the user via a separate `git clone` step
-  (see [README-voice-studio-dgx.md](./README-voice-studio-dgx.md) §1).
+  (see the "Install" section of the README).
 - Why this is NOT a derivative work: the Free Software Foundation has clarified
   that invoking a GPL/AGPL program via subprocess / pipes / stdin-stdout is
   "mere aggregation" and does not extend the AGPL terms to the calling program.

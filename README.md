@@ -44,7 +44,7 @@ git clone https://github.com/jagones84/VoiceStudio_mcp.git   VoiceStudio_mcp
 
 ### 2. Build VoiceStudio venv (one-time, ~5min)
 
-Follow the procedure in `.agent/README-voice-studio-dgx.md` (L24-L28):
+Run the following steps to build VoiceStudio's venv:
 
 ```bash
 cd VoiceStudio
@@ -292,7 +292,7 @@ Auto-fallback: if subprocess fails because the binary is missing, switches to in
 
 ### LD_LIBRARY_PATH for cu12 NPP
 
-torchcodec (used by torchaudio 2.11) loads `libnppicc.so.12`. DGX Spark only has CUDA 13 system libs. The engine wrapper sets `LD_LIBRARY_PATH` to point at the **pip-installed** `nvidia-npp-cu12==12.4.1.87` (from VoiceStudio venv) BEFORE the system CUDA 13 path. This avoids the TLS clash caused by symlinks (see `.agent/README-voice-studio-dgx.md` L26).
+torchcodec (used by torchaudio 2.11) loads `libnppicc.so.12`. DGX Spark only has CUDA 13 system libs. The engine wrapper sets `LD_LIBRARY_PATH` to point at the **pip-installed** `nvidia-npp-cu12==12.4.1.87` (from VoiceStudio venv) BEFORE the system CUDA 13 path. This avoids the TLS clash caused by symlinks.
 
 ---
 
