@@ -1,6 +1,6 @@
 # Third-Party Licenses
 
-`mcp-voice-studio` (this repo) is AGPL-3.0-licensed (see [LICENSE](./LICENSE)),
+`VoiceStudio_mcp` (this repo) is AGPL-3.0-licensed (see [LICENSE](./LICENSE)),
 matching the upstream VoiceStudio license.
 The following third-party components are NOT distributed in this repository —
 they are installed or downloaded separately at runtime — but their licenses
@@ -13,7 +13,7 @@ are listed here for full transparency.
 - Repository: https://github.com/debpalash/VoiceStudio
 - License: GNU Affero General Public License v3.0
 - SPDX: `AGPL-3.0-or-later`
-- How it is used: `mcp-voice-studio` invokes the `omnivoice-infer` binary
+- How it is used: `VoiceStudio_mcp` invokes the `omnivoice-infer` binary
   from VoiceStudio's venv as a separate subprocess. No code from VoiceStudio
   is copied, modified, or statically/dynamically linked into this repo.
   VoiceStudio is installed by the user via a separate `git clone` step
@@ -70,7 +70,7 @@ For full license texts, see the corresponding PyPI pages or the
 
 ## Summary
 
-- **This repo (`mcp-voice-studio`) is AGPL-3.0.** It shares the license of the
+- **This repo (`VoiceStudio_mcp`) is AGPL-3.0.** It shares the license of the
   upstream VoiceStudio engine it wraps. If you distribute it or run it as a
   network service, respect the AGPL source-availability clauses.
 - **VoiceStudio is AGPL-3.0 and stays AGPL-3.0.** You must respect its

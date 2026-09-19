@@ -5,7 +5,7 @@
       "command": "ssh",
       "args": [
         "dgx",
-        "cd /home/jagones/Repositories/mcp-voice-studio && /home/jagones/.local/bin/uv run --no-sync python -m mcp_voice_studio"
+        "cd /home/jagones/Repositories/VoiceStudio_mcp && /home/jagones/.local/bin/uv run --no-sync python -m mcp_voice_studio"
       ],
       "env": {
         "HF_TOKEN": "hf_xxx",

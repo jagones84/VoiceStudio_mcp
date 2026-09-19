@@ -1,4 +1,4 @@
-# mcp-voice-studio
+# VoiceStudio_mcp
 
 **MCP server wrapper for [VoiceStudio (debpalash)](https://github.com/debpalash/VoiceStudio) — local voice cloning & TTS via the [OmniVoice](https://huggingface.co/k2-fsa/OmniVoice) engine.**
 
@@ -39,7 +39,7 @@ VoiceStudio is a great local ElevenLabs alternative (AGPL-3.0, 1.3k+ stars) but 
 mkdir -p ~/Repositories
 cd ~/Repositories
 git clone https://github.com/debpalash/VoiceStudio.git
-git clone <this-repo>   mcp-voice-studio
+git clone https://github.com/jagones84/VoiceStudio_mcp.git   VoiceStudio_mcp
 ```
 
 ### 2. Build VoiceStudio venv (one-time, ~5min)
@@ -68,7 +68,7 @@ python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_
 ### 3. Build this MCP venv (lightweight, ~30s)
 
 ```bash
-cd ../mcp-voice-studio
+cd ../VoiceStudio_mcp
 cp .env.template .env
 # edit .env: set HF_TOKEN (free at https://huggingface.co/settings/tokens)
 export PATH="$HOME/.local/bin:$PATH"
@@ -103,7 +103,7 @@ Add to `.mcp.json` (project root or `~/.trae/mcp.json`):
       "command": "ssh",
       "args": [
         "dgx",
-        "cd /home/jagones/Repositories/mcp-voice-studio && /home/jagones/.local/bin/uv run --no-sync python -m mcp_voice_studio"
+        "cd /home/jagones/Repositories/VoiceStudio_mcp && /home/jagones/.local/bin/uv run --no-sync python -m mcp_voice_studio"
       ],
       "env": {
         "HF_TOKEN": "hf_xxx",
@@ -124,7 +124,7 @@ Replace `dgx` with your SSH host alias, and `hf_xxx` with your real HF token (fr
   "mcpServers": {
     "voice-studio": {
       "command": "ssh",
-      "args": ["dgx", "cd /home/jagones/Repositories/mcp-voice-studio && /home/jagones/.local/bin/uv run --no-sync python -m mcp_voice_studio"]
+      "args": ["dgx", "cd /home/jagones/Repositories/VoiceStudio_mcp && /home/jagones/.local/bin/uv run --no-sync python -m mcp_voice_studio"]
     }
   }
 }
@@ -147,7 +147,7 @@ Tool response:
 {
   "status": "ok",
   "voice_name": "claudia_asmr",
-  "profile_path": "/home/jagones/Repositories/mcp-voice-studio/mcp_voice_studio/data/voices/claudia_asmr/profile.json",
+  "profile_path": "/home/jagones/Repositories/VoiceStudio_mcp/mcp_voice_studio/data/voices/claudia_asmr/profile.json",
   "ref_audio_path": ".../data/voices/claudia_asmr/ref_audio.wav"
 }
 ```
@@ -161,7 +161,7 @@ Tool response:
 Tool response:
 ```json
 {
-  "output_path": "/home/jagones/Repositories/mcp-voice-studio/mcp_voice_studio/data/outputs/synth_1757062500.wav",
+  "output_path": "/home/jagones/Repositories/VoiceStudio_mcp/mcp_voice_studio/data/outputs/synth_1757062500.wav",
   "duration_s": 24.04,
   "sample_rate": 24000,
   "channels": 1,
@@ -253,7 +253,7 @@ For ASMR whisper: `whisper, female, low pitch`
 ## Architecture
 
 ```
-mcp-voice-studio/
+VoiceStudio_mcp/
 ├── pyproject.toml                 # mcp + pydantic + numpy + scipy (no torch!)
 ├── mcp_voice_studio/
 │   ├── server.py                  # FastMCP entry, registers 6 tools
@@ -353,6 +353,6 @@ Copyright (c) 2026 jagones84.
 **AGPL-3.0** — this wrapper is licensed under the GNU Affero General Public License v3.0, the same license as the upstream [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) it drives. See [LICENSE](./LICENSE) and [THIRD_PARTY_LICENSES.md](./THIRD_PARTY_LICENSES.md) for the full picture.
 
 **TL;DR for publishing on GitHub:**
-- This repo (`mcp-voice-studio`) is **AGPL-3.0** — if you run it (or a modified version) as a network service, AGPL section 13 requires you to offer the corresponding source to your users.
+- This repo (`VoiceStudio_mcp`) is **AGPL-3.0** — if you run it (or a modified version) as a network service, AGPL section 13 requires you to offer the corresponding source to your users.
 - **VoiceStudio is AGPL-3.0** — installed separately via `git clone`, NOT bundled here. It is the upstream engine this wrapper exposes over MCP.
 - **OmniVoice is Apache 2.0**, **higgs-audio-v2-tokenizer is MIT** — both downloaded from Hugging Face at runtime, NOT bundled.
