@@ -348,6 +348,8 @@ Both scripts call the same code paths the MCP tools use (`synthesize_speech` for
 
 ## License
 
+Copyright (c) 2026 jagones84.
+
 **AGPL-3.0** — this wrapper is licensed under the GNU Affero General Public License v3.0, the same license as the upstream [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) it drives. See [LICENSE](./LICENSE) and [THIRD_PARTY_LICENSES.md](./THIRD_PARTY_LICENSES.md) for the full picture.
 
 **TL;DR for publishing on GitHub:**
