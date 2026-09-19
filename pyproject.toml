@@ -4,8 +4,8 @@ version = "0.1.0"
 description = "MCP server wrapper for VoiceStudio (OmniVoice engine) - voice cloning, synthesis, voice design"
 readme = "README.md"
 requires-python = ">=3.12"
-license = { text = "MIT" }
-authors = [{ name = "Giovanni" }]
+license = { text = "AGPL-3.0-or-later" }
+authors = [{ name = "jagones84" }]
 keywords = ["mcp", "voice-cloning", "tts", "omnivoice", "asr"]
 
 dependencies = [

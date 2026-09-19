@@ -1,6 +1,7 @@
 # Third-Party Licenses
 
-`mcp-voice-studio` (this repo) is MIT-licensed (see [LICENSE](./LICENSE)).
+`mcp-voice-studio` (this repo) is AGPL-3.0-licensed (see [LICENSE](./LICENSE)),
+matching the upstream VoiceStudio license.
 The following third-party components are NOT distributed in this repository —
 they are installed or downloaded separately at runtime — but their licenses
 are listed here for full transparency.
@@ -20,10 +21,9 @@ are listed here for full transparency.
 - Why this is NOT a derivative work: the Free Software Foundation has clarified
   that invoking a GPL/AGPL program via subprocess / pipes / stdin-stdout is
   "mere aggregation" and does not extend the AGPL terms to the calling program.
-- AGPL section 13 ("Remote Network Interaction"): applies **only** if you
-  offer a network service that exposes VoiceStudio functionality to remote
-  users. For local/personal use or distribution of this MIT-licensed wrapper,
-  it does not trigger.
+- AGPL section 13 ("Remote Network Interaction"): since this wrapper is itself
+  AGPL-3.0, offering it (or a modified version) as a network service requires
+  you to make the corresponding source available to your users.
 
 If you distribute VoiceStudio itself (or a derivative thereof), you must do
 so under AGPL-3.0 and respect its source-availability clauses. That is
@@ -70,13 +70,11 @@ For full license texts, see the corresponding PyPI pages or the
 
 ## Summary
 
-- **This repo (`mcp-voice-studio`) is MIT.** You can publish, fork, modify,
-  and sublicense it under MIT terms. Credit appreciated but not legally
-  required.
+- **This repo (`mcp-voice-studio`) is AGPL-3.0.** It shares the license of the
+  upstream VoiceStudio engine it wraps. If you distribute it or run it as a
+  network service, respect the AGPL source-availability clauses.
 - **VoiceStudio is AGPL-3.0 and stays AGPL-3.0.** You must respect its
-  terms **only** if you distribute VoiceStudio itself (or modified versions
-  of it). Installing it locally and invoking it via subprocess from this
-  MIT wrapper does not extend AGPL-3.0 to this wrapper.
+  terms if you distribute VoiceStudio itself (or modified versions of it).
 - **Apache 2.0 / MIT components** impose attribution. Keep the credits
   in the README and consider including a NOTICE file in derivative
   distributions.

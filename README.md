@@ -348,10 +348,9 @@ Both scripts call the same code paths the MCP tools use (`synthesize_speech` for
 
 ## License
 
-MIT. See [LICENSE](./LICENSE) and [THIRD_PARTY_LICENSES.md](./THIRD_PARTY_LICENSES.md) for the full picture.
+**AGPL-3.0** — this wrapper is licensed under the GNU Affero General Public License v3.0, the same license as the upstream [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) it drives. See [LICENSE](./LICENSE) and [THIRD_PARTY_LICENSES.md](./THIRD_PARTY_LICENSES.md) for the full picture.
 
 **TL;DR for publishing on GitHub:**
-- This wrapper (this repo) is **MIT** — you can publish, fork, modify freely.
-- **VoiceStudio is AGPL-3.0** — installed separately via `git clone`, NOT bundled here. Subprocess invocation does not extend AGPL to this wrapper (mere aggregation per FSF interpretation).
+- This repo (`mcp-voice-studio`) is **AGPL-3.0** — if you run it (or a modified version) as a network service, AGPL section 13 requires you to offer the corresponding source to your users.
+- **VoiceStudio is AGPL-3.0** — installed separately via `git clone`, NOT bundled here. It is the upstream engine this wrapper exposes over MCP.
 - **OmniVoice is Apache 2.0**, **higgs-audio-v2-tokenizer is MIT** — both downloaded from Hugging Face at runtime, NOT bundled.
-- If you offer VoiceStudio's functionality as a network service, AGPL section 13 requires you to make the VoiceStudio source available to your users (irrelevant for local/personal use).
