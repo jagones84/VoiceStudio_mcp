@@ -43,3 +43,6 @@ data/inputs/*
 # OS
 .DS_Store
 Thumbs.db
+
+# local operator memory (never shipped)
+.agent/
